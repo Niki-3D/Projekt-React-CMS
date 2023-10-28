@@ -1,0 +1,192 @@
+@import "./../../colors.scss";
+@import "./../../mixins.scss";
+
+.dashboard-container {
+  max-width: 1200px;
+  width: 100%;
+  background: $black;
+  margin: 0 auto;
+  padding-bottom: 60px;
+
+  .logout {
+    .logout-button {
+      background: $btn;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .color-picker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .color-picker-box1,
+    .color-picker-box2,
+    .color-picker-box3 {
+      flex-basis: calc(30.33% - 10px);
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: $greyLight;
+      border: 1px solid $blackWashy;
+      border-radius: 10px;
+      height: 300px;
+
+      p {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: $blackWashy;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $greyLight;
+        border-radius: 5px;
+        outline: none;
+        height: 85%;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .show-home-btn {
+    text-align: right;
+    padding: 10px 20px;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .section-settings {
+    padding: 20px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        color: $white;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+        background: $btn;
+        color: $white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.3s;
+
+        &:hover {
+          background: $gold;
+        }
+      }
+    }
+  }
+
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .box {
+      flex-basis: calc(30.33% - 10px);
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      padding: 20px;
+      background: $greyLight;
+      border: 1px solid $blackWashy;
+      border-radius: 10px;
+
+      h3 {
+        font-size: 20px;
+        color: $blackWashy;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: $blackWashy;
+      }
+    }
+  }
+
+  .shuffle-button {
+    background: $btn;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .image-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    input {
+      width: calc(30.33% - 10px);
+      padding: 10px;
+      border: 1px solid $greyLight;
+      border-radius: 5px;
+      outline: none;
+      height: 50px;
+    }
+
+    &::placeholder {
+      color: $greyLight;
+    }
+  }
+
+  .text-input {
+    input {
+      width: 30%;
+      padding: 10px;
+      border: 1px solid $greyLight;
+      border-radius: 5px;
+      outline: none;
+    }
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .move-left-button,
+  .move-right-button {
+    background: $btn;
+    color: $white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 50px;
+
+    &:hover {
+      background: $gold;
+    }
+  }
+}

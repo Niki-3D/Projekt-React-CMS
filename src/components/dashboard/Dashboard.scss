@@ -234,4 +234,61 @@
       width: calc(30.33% - 10px);
     }
   }
+  @media only screen and (max-width: 768px) {
+    .color-picker-box1,
+    .color-picker-box2,
+    .color-picker-box3 {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .box,
+    .image-links input,
+    .text-input input {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .box-container,
+    .color-picker,
+    .image-links,
+    .text-input {
+      flex-direction: column;
+    }
+
+    .move-left-button,
+    .move-right-button {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .color-picker-box1,
+    .color-picker-box2,
+    .color-picker-box3 {
+      flex-basis: calc(50% - 10px);
+    }
+
+    .box,
+    .image-links input,
+    .text-input input {
+      width: calc(50% - 10px);
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    .color-picker-box1,
+    .color-picker-box2,
+    .color-picker-box3 {
+      flex-basis: calc(30.33% - 10px);
+    }
+
+    .box,
+    .image-links input,
+    .text-input input {
+      width: calc(30.33% - 10px);
+    }
+  }
 }

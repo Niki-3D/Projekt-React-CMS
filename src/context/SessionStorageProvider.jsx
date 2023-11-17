@@ -1,4 +1,4 @@
-import React, { createContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { AppContext } from "./app.context";
 
 export const SessionStorageProvider = ({ children }) => {
@@ -49,29 +49,18 @@ export const SessionStorageProvider = ({ children }) => {
     }
   }, []);
 
-  useEffect(() => {
-    sessionStorage.setItem("logged", logged);
-  }, [logged]);
+  const useSessionStorage = (key, value) => {
+    useEffect(() => {
+      sessionStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+  };
 
-  useEffect(() => {
-    sessionStorage.setItem("slider", slider);
-  }, [slider]);
-
-  useEffect(() => {
-    sessionStorage.setItem("boxColors", JSON.stringify(boxColors));
-  }, [boxColors]);
-
-  useEffect(() => {
-    sessionStorage.setItem("boxOrder", JSON.stringify(boxOrder));
-  }, [boxOrder]);
-
-  useEffect(() => {
-    sessionStorage.setItem("imageLinks", JSON.stringify(imageLinks));
-  }, [imageLinks]);
-
-  useEffect(() => {
-    sessionStorage.setItem("textInput", textInput);
-  }, [textInput]);
+  useSessionStorage("logged", logged);
+  useSessionStorage("slider", slider);
+  useSessionStorage("boxColors", boxColors);
+  useSessionStorage("boxOrder", boxOrder);
+  useSessionStorage("imageLinks", imageLinks);
+  useSessionStorage("textInput", textInput);
 
   return (
     <AppContext.Provider

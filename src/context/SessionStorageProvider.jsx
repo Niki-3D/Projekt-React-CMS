@@ -47,7 +47,14 @@ export const SessionStorageProvider = ({ children }) => {
     if (storedTextInput) {
       setTextInput(storedTextInput);
     }
-  }, []);
+  }, [
+    setLogged,
+    setSlider,
+    setBoxColors,
+    setBoxOrder,
+    setImageLinks,
+    setTextInput,
+  ]); // Add dependencies here
 
   const useSessionStorage = (key, value) => {
     useEffect(() => {
